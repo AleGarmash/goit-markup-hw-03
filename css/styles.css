@@ -127,6 +127,8 @@ body {
 	margin: auto;
 	display: block;
 	border: none;
+
+	cursor: pointer;
 }
 
 /* Advantages */
