@@ -94,10 +94,9 @@ body {
 	justify-content: space-between;
 }
 
-.header-menu .item + .item {
-	margin-left: 50px;
+.header-menu not :last-child {
+	margin-right: 50px;
 }
-
 .header-nav {
 	display: flex;
 	align-items: center;
@@ -108,10 +107,24 @@ body {
 	margin-left: 93px;
 }
 
+.header-menu .item + .item {
+	margin-left: 50px;
+}
+
 .contacts {
 	display: flex;
 	align-items: center;
+	margin-left: auto;
 }
+
+/* .contacts .contacts-item + .contacts-item {
+	margin-left: 50px;
+} */
+
+.contacts :not(:last-child) {
+	margin-right: 50px;
+}
+
 .logo-link {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -126,6 +139,9 @@ body {
 	color: var(--accent-color);
 }
 .header-menu-link {
+	display: block;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	color: var(--title-color);
 	text-decoration: none;
 	font-weight: 500;
@@ -162,9 +178,13 @@ body {
 /* Hero section  */
 .hero {
 	background-color: #2f303a;
-
-	/* height: 600px; */
+	align-items: center;
 }
+
+/* .hero-box {
+	margin-top: 200px;
+	margin-bottom: 200px;
+} */
 .hero-title {
 	font-weight: 900;
 	font-size: 44px;
@@ -177,6 +197,7 @@ body {
 }
 
 .hero-btn {
+	margin-top: 30px;
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
@@ -199,8 +220,36 @@ body {
 }
 
 /* Advantages */
-.advantages-title {
-	visibility: hidden;
+.advantages {
+	margin-top: 94px;
+	margin-bottom: 94px;
+	/* background-color: tomato; */
+}
+
+.advantages-list {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: teal; */
+}
+.advantages-list :not(:last-child) {
+	margin-right: 30px;
+}
+
+/* .advantages-item {
+	background-color: red;
+} */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .advantages-subtitle {
@@ -213,6 +262,7 @@ body {
 }
 
 .advantages-text {
+	margin-top: 10px;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
@@ -232,10 +282,37 @@ body {
 	color: #212121;
 }
 
+/* What we do  */
+.wwd {
+	margin-bottom: 94px;
+}
+
+.wwd-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+.wwd-list :not(:last-child) {
+	margin-right: 30px;
+}
+
 /* Team */
 
 .team {
 	background-color: var(--secondary-background-color);
+}
+.team-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.team-list :not(:last-child) {
+	margin-right: 30px;
+}
+
+.team-box {
+	margin-top: 94px;
+	margin-bottom: 94px;
 }
 
 .team-list-item {
@@ -254,6 +331,7 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: #212121;
+	align-items: center;
 }
 
 .team-list-job {
