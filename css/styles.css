@@ -452,9 +452,13 @@ body {
 	height: 404px;
 
 	background: #ffffff;
-	border: 1px solid #eeeeee;
 }
 
+.border {
+	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+}
 .portfolio-title {
 	margin: 0;
 	font-weight: 700;
@@ -466,7 +470,7 @@ body {
 	color: #212121;
 
 	margin-left: 24px;
-	margin-top: 20px;
+	padding-top: 20px;
 }
 
 .portfolio-text {
@@ -479,4 +483,5 @@ body {
 
 	margin-left: 24px;
 	margin-top: 4px;
+	padding-bottom: 20px;
 }
