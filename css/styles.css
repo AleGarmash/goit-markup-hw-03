@@ -22,7 +22,11 @@ h5,
 h6,
 p {
 	margin-top: 0;
+	margin: 0;
 }
+/* p {
+	margin: 0;
+} */
 /* Класс для обнуления базовых свойств у списков (ul) */
 .list {
 	list-style: none;
@@ -66,36 +70,38 @@ address {
 body {
 	font-family: "Roboto", sans-serif;
 	font-style: normal;
+	margin: 0;
 }
 
 /* Home page */
 
 /* Header  */
 
-/* .header-menu,
-.contacts,
-.advantages-list,
-.wwd-list,
-.team-list {
-	list-style: none;
-} */
 .header-main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.header-menu not :last-child {
-	margin-right: 50px;
-}
 .header-nav {
 	display: flex;
 	align-items: center;
 }
+
+.logo-link {
+	color: var(--title-color);
+	font-family: "Roboto", Arial, sans-serif;
+	text-decoration: none;
+}
+
 .header-menu {
 	display: flex;
 	align-items: center;
 	margin-left: 93px;
+}
+
+.header-menu not :last-child {
+	margin-right: 50px;
 }
 
 .header-menu .item + .item {
@@ -110,12 +116,6 @@ body {
 
 .header-menu-link.curent {
 	color: var(--accent-color);
-}
-
-.logo-link {
-	color: var(--title-color);
-	font-family: "Roboto", Arial, sans-serif;
-	text-decoration: none;
 }
 
 /* .contacts .contacts-item + .contacts-item {
@@ -394,9 +394,19 @@ body {
 .footer-list-item:not(:last-child) {
 	margin-bottom: 9px;
 }
-/* Portfolio page  */
 
+/* Portfolio page  */
+.filter-list {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	justify-content: center;
+	margin-top: 94px;
+	margin-bottom: 50px;
+	gap: 8px;
+}
 .portfolio-btn {
+	padding: 6px 22px;
 	font-family: inherit;
 
 	font-weight: 500;
@@ -412,6 +422,12 @@ body {
 
 	background-color: #f5f4fa;
 	border-radius: 4px;
+
+	/* shadow-middle */
+
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
 }
 
 .portfolio-btn:hover {
@@ -423,9 +439,15 @@ body {
 	color: #ffffff;
 }
 
-.portfolio-item {
-	box-sizing: border-box;
+/* КАРТОЧКИ ПОРТФОЛИО */
 
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin-bottom: 94px;
+}
+.portfolio-item {
 	width: 370px;
 	height: 404px;
 
@@ -434,6 +456,7 @@ body {
 }
 
 .portfolio-title {
+	margin: 0;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
@@ -441,6 +464,9 @@ body {
 	letter-spacing: 0.06em;
 
 	color: #212121;
+
+	margin-left: 24px;
+	margin-top: 20px;
 }
 
 .portfolio-text {
@@ -450,4 +476,7 @@ body {
 
 	letter-spacing: 0.03em;
 	color: #757575;
+
+	margin-left: 24px;
+	margin-top: 4px;
 }
