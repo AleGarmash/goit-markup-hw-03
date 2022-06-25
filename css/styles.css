@@ -4,6 +4,46 @@ sans-serif;
 font-family: 'Roboto',
 sans-serif; */
 
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+/* Свойства для корректного отображения картинок */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Свойства для обнуления курсива у address */
+address {
+	font-style: normal;
+}
+
 :root {
 	--primary-background-color: #ffffff;
 	--secondary-background-color: #f5f4fa;
@@ -12,6 +52,14 @@ sans-serif; */
 
 	--title-color: #212121;
 	--text-color: #757575;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 body {
@@ -40,11 +88,30 @@ body {
 .team-list {
 	list-style: none;
 } */
-
-.list {
-	list-style: none;
+.header-main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
+.header-menu .item + .item {
+	margin-left: 50px;
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+}
+.header-menu {
+	display: flex;
+	align-items: center;
+	margin-left: 93px;
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+}
 .logo-link {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
